@@ -26,4 +26,4 @@ const student3 = {
   petName: "Pizzetta",
 };
 
-team.push(student1, student3);
+team.push(student3);
