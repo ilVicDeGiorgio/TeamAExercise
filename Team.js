@@ -1,19 +1,17 @@
 const team = [];
 
-const student1 = {
+const student = {
   name: "Vittorio",
   surname: "De Giorgio",
   age: 27,
   city: "Amaroni",
   hobby: "Gym",
-  favoriteFood: "Carbonara",
-  favoriteVideoGame: "DaysGone",
-  favoriteFilm: "Interstellar",
-  favoriteBook: "",
-  petName: "Dog",
+  favouriteFood: "Carbonara",
+  favouriteVideogame: "Daysgone",
+  favouriteFilm: "Interstellar",
+  favouriteBook: "Adrenalina",
+  petName: "Doggo",
 };
-
-team.push(student1)
 
 const student3 = {
   name: "Rossella",
@@ -28,4 +26,5 @@ const student3 = {
   petName: "Pizzetta",
 };
 
-team.push(student3);
+team.push(student, student3);
+
