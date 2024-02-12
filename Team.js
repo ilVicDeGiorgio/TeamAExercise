@@ -13,6 +13,8 @@ const student1 = {
   petName: "Dog",
 };
 
+team.push(student1)
+
 const student3 = {
   name: "Rossella",
   surname: "Sonzogni",
