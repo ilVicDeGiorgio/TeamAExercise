@@ -13,4 +13,18 @@ const student = {
   petName: "Doggo",
 };
 
-team.push(student);
+const student3 = {
+  name: "Rossella",
+  surname: "Sonzogni",
+  age: 30,
+  city: "Anzio",
+  hobby: "Cooking",
+  favoriteFood: "Pizza",
+  favoriteVideoGame: "The Witcher",
+  favoriteFilm: "V per Vendetta",
+  favoriteBook: "Io e te, Nicola Ammaniti",
+  petName: "Pizzetta",
+};
+
+team.push(student, student3);
+
