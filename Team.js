@@ -13,6 +13,19 @@ const student = {
   petName: "Doggo",
 };
 
+const student4 = {
+  name: "Massimo",
+  surname: "Altamura",
+  age: 20,
+  city: "Nocera Superiore",
+  hobby: "Gym",
+  favoriteFood: "Pizza",
+  favoriteVideoGame: "Call of duty",
+  favoriteFilm: "",
+  favoriteBook: "",
+  petName: "",
+};
+
 const student2 = {
   name: "Letterio",
   surname: "Briguglio",
@@ -40,4 +53,3 @@ const student3 = {
 };
 
 team.push(student, student2, student3);
-
