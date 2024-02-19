@@ -40,7 +40,7 @@ const student3 = {
 };
 
 const student4 = {
-  name: "Rossella",
+  name: "Massimo",
   surname: "Altamura",
   age: 20,
   city: "Nocera Superiore",
