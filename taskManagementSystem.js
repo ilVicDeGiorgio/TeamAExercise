@@ -1,18 +1,21 @@
 const taskNames = [];
 
-function handleResult(task) {
-  if (typeof task === "string") {
-    taskNames.push(task);
-    return `Task aggiunta: ${task}`;
+function handleResult(error,data) {
+  if (error) {
+    console.log(error);
   } else {
-    return "Error: Task non è una stringa.";
+    console.log(data);
   }
 }
 
 function addTask(task, callback) {
   setTimeout(() => {
-    callback(task);
-    console.log(handleResult(task));
+    if (typeof task === "string") {
+      taskNames.push(task);
+      callback(null, "Task added successfully");
+    } else {
+      callback(new Error("Task must be a non-empty string"), null);
+    }
   }, 2000);
 }
 
