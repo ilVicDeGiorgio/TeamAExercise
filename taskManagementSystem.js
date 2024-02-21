@@ -19,11 +19,10 @@ function addTask(task, callback) {
   }, 2000);
 }
 
-function callback2() {
-  //a function to handle the result
-}
 function completeTask(index, callback) {
-  setTimeout(/*/*/ 3000);
+  setTimeout(
+    //
+      3000);
 }
 
 addTask("Annaffia le piante", handleResult);
