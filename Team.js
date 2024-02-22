@@ -14,7 +14,7 @@ const student1 = {
 };
 
 team.push(student1);
-const student3 = {
+const student4 = {
   name: "Massimo",
   surname: "Altamura",
   age: 20,
@@ -27,4 +27,13 @@ const student3 = {
   petName: "",
 };
 
-team.push(student3);
+team.push(student4);
+function stampaStudentiConAnimaleDomestico(team) {
+  for (let i = 0; i < team.length; i++) {
+    const studente = team[i];
+    if (studente.petName !== "") {
+      console.log(studente.name + " ha un animale domestico.");
+    }
+  }
+}
+stampaStudentiConAnimaleDomestico();
