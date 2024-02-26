@@ -34,6 +34,11 @@ function completeTask(task, index, callback) {
   }, 0); // Timeout impostato a 0 per l'esecuzione immediata (dopo il ciclo degli eventi)
 }
 
+function listTasks() {
+  for (let i = 0; i < taskNames.length; i++) {
+    console.log(`${i}: ${taskNames[i]}`);
+  }
+}
 
 addTask("Fare la spesa", (error, message) => {
   if (error) {
