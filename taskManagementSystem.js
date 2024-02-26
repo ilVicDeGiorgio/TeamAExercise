@@ -21,36 +21,22 @@ function addTask(task, callback) {
 
 function completeTask(index, callback) {
   setTimeout(() => {
-    if (index < 0 || index >= taskNames.length) {
+    if (index < 0 || index > taskNames.length) {
       callback(new Error("Indice attività non valido"));
     } else {
       taskNames.splice(index, 1);
       callback(null, "Attività completata con successo");
     }
-  }, 0);
+  }, 5000);
 }
 
 function listTasks() {
-  for (let i = 0; i < taskNames.length; i++) {
-    console.log(`${i}: ${taskNames[i]}`);
-  }
+  setTimeout(() => {
+    for (let i = 0; i < taskNames.length; i++) {
+      console.log(`${i}: ${taskNames[i]}`);
+    }
+  }, 4000);
 }
-
-addTask("Fare la spesa", (error, message) => {
-  if (error) {
-    console.error("Errore durante l'aggiunta dell'attività:", error.message);
-  } else {
-    console.log(message);
-  }
-});
-
-addTask("", (error, message) => {
-  if (error) {
-    console.error("Errore durante l'aggiunta dell'attività:", error.message);
-  } else {
-    console.log(message);
-  }
-});
 
 completeTask(0, (error, message) => {
   if (error) {
@@ -75,4 +61,6 @@ completeTask(1, (error, message) => {
 });
 
 console.log("Attività attuali:");
+addTask("Fare la spesa", handleResult);
+addTask("Cucinare", handleResult);
 listTasks();
