@@ -1,6 +1,6 @@
 const taskNames = [];
 
-function handleResult(error,data) {
+function handleResult(error, data) {
   if (error) {
     console.log(error);
   } else {
@@ -12,26 +12,22 @@ function addTask(task, callback) {
   setTimeout(() => {
     if (typeof task === "string") {
       taskNames.push(task);
-      callback(null, "Task added successfully");
+      callback(null, `${task}: Task added successfully`);
     } else {
       callback(new Error("Task must be a non-empty string"), null);
     }
   }, 2000);
 }
 
-function completeTask(task, index, callback) {
-  // Simulazione di un'operazione asincrona utilizzando setTimeout
+function completeTask(index, callback) {
   setTimeout(() => {
-    if (index < 0 || index >= task.length) {
-      // Se l'indice non è nell'intervallo valido, richiama la callback con un oggetto Error
+    if (index < 0 || index >= taskNames.length) {
       callback(new Error("Indice attività non valido"));
     } else {
-      // Rimuovi l'attività all'indice specificato
-      task.splice(index, 1);
-      // Richiama la callback con null (nessun errore) e il messaggio di successo
-      callback(null, "Attività completata correttamente");
+      taskNames.splice(index, 1);
+      callback(null, "Attività completata con successo");
     }
-  }, 0); // Timeout impostato a 0 per l'esecuzione immediata (dopo il ciclo degli eventi)
+  }, 0);
 }
 
 function listTasks() {
@@ -80,6 +76,3 @@ completeTask(1, (error, message) => {
 
 console.log("Attività attuali:");
 listTasks();
-
-addTask("Annaffia le piante", handleResult);
-addTask(41, handleResult);
