@@ -33,6 +33,7 @@ function completeTask(index, callback) {
 function listTasks() {
   setTimeout(() => {
     for (let i = 0; i < taskNames.length; i++) {
+      //andava bene un forEach poiché più indicato per iterare su un array
       console.log(`${i}: ${taskNames[i]}`);
     }
   }, 4000);
