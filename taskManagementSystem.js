@@ -65,3 +65,7 @@ console.log("Attività attuali:");
 addTask("Fare la spesa", handleResult);
 addTask("Cucinare", handleResult);
 listTasks();
+
+/*(async()=>{
+const data = await getFunction()
+})() - esempio di Bernard su come invocare una funzione in modo asincrono, utilizzando l'await sulla callback*/
