@@ -14,9 +14,7 @@ function filterArray(arr, callback) {
     return filteredNumbers;
 }
 
-function isEven(num) {
-    return num % 2 === 0;
-}
+const isEven = num => num % 2 === 0;
 
 const numbers = [1, 2, 3, 4, 5, 6];
 const evenNumbers = filterArray(numbers, isEven);

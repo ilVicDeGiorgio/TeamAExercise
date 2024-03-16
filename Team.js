@@ -52,4 +52,17 @@ const student4 = {
   petName: "",
 };
 
-team.push(student, student2, student3, student4);
+const student5 = {
+  name: "Francesco",
+  surname: "Setti",
+  age: 34,
+  city: "Lecco",
+  hobby: "Classical Music",
+  favoriteFood: "Pizzoccheri",
+  favoriteVideoGame: "Grandia",
+  favoriteFilm: "stalker",
+  favoriteBook: "many",
+  petName: "Oak",
+};
+
+team.push(student, student2, student3, student4, student5);
